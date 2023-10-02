@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planetary Tourism Office</title>
+
+        <!--GoogleFonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+
+        <!--CSS読み込み-->
+        <link rel="stylesheet" href="./asset/reset.css">
+
+        <link rel="stylesheet" href="./asset/style.css">
+
+        <!--アイコン読み込み-->
+        <script src="https://kit.fontawesome.com/2cd68e5bc6.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!--ヘッダー部分-->
+        <header>
+            <a href="./index.html" id="title">Planetary Tourism Office</a>
+            <a href="#" class="nav">What Is It?</a>
+            <a href="#" class="nav">Tour Course</a>
+            <a href="#" class="nav">Tour Cost</a>
+            <a href="#" class="nav">Others</a>
+        </header>
+        <button id="header-open">
+            <i id="header-button" class="fa-solid fa-angles-down"></i>
+        </button>
+
+        <!--メイン部分-->
+        <main>
+            <div id="solar-system">
+                <div id="sun" class="planet"></div>
+                <a href="#" id="planet1" class="planet"></a>
+                <a href="#" id="planet2" class="planet"></a>
+                <a href="#" id="planet3" class="planet"></a>
+                <a href="#" id="planet4" class="planet"></a>
+                <a href="#" id="planet5" class="planet"></a>
+                <a href="#" id="planet6" class="planet"></a>
+                <a href="#" id="planet7" class="planet"></a>
+                <a href="#" id="planet8" class="planet"></a>
+            </div>
+        </main>
+
+        <!--モーダル部分-->
+        <dialog>
+            <button id="modal-close">閉じる</button>
+        </dialog>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./asset/main.js"></script>
+    </body>
+</html>
