@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+html, body{
+    width: 100%;
+    height: 100vh;
+    background-color: #090909;
+    
+    font-size: 62.5%;
+    font-size: 10px;
+    font-family: "Alatsi";
+}
+
+/*==============================*/
+
+header{
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff55;
+
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+    transform: translateY(-10vh);
+    transition: all .25s;
+}
+
+header.nav-view{
+    transform: translateY(0);
+}
+
+#title{
+    width: 40%;
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+    line-height: 10vh;
+    font-size: 4rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header .nav{
+    width: calc(calc(100% - 40%)/4);
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+    line-height: 10vh;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #bcbcbc;
+    text-decoration: none;
+
+    transition: all .25s;
+}
+
+header .nav:hover{
+    color: #ffffff;
+}
+
+#header-open{
+    width: 7rem;
+    height: 3.5rem;
+
+    display: block;
+
+    position: fixed;
+    top: 10%;
+    left: 1%;
+    z-index: 999;
+
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+    
+    transform: translateY(-10vh);
+    transition: all .25s;
+}
+
+#header-open.nav-view{
+    transform: translateY(0);
+}
+
+/*==============================*/
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+main #solar-system{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    position: relative;
+}
+
+#solar-system #sun{
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    background-color: #ffa800;
+
+    display: block;
+
+    position: absolute;
+    top: 10%;
+    left: -35%;
+
+    border-radius: 50%;
+}
+
+.planet{
+    display: block;
+    filter: drop-shadow(-16px 0 5px black);
+}
+
+/*水星*/
+#planet1{
+    height: 10%;
+    aspect-ratio: 1 / 1;
+    background-color: #d9d9d9;
+
+    position: absolute;
+    top: calc(calc(100% - 10%) / 2);
+    left: 7.5%;
+
+    border-radius: 50%;
+}
+
+#planet1::before{
+    content: "MERCURY";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*金星*/
+#planet2{
+    height: 15%;
+    aspect-ratio: 1 / 1;
+    background-color: #FFDE59;
+
+    position: absolute;
+    top: calc(calc(100% - 15%) / 2);
+    left: 15%;
+
+    border-radius: 50%;
+}
+
+#planet2::before{
+    content: "VENUS";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*地球*/
+#planet3{
+    height: 15%;
+    aspect-ratio: 1 / 1;
+    background-color: #5271FF;
+
+    position: absolute;
+    top: calc(calc(100% - 15%) / 2);
+    left: 25%;
+
+    border-radius: 50%;
+}
+
+#planet3::before{
+    content: "EARTH";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*火星*/
+#planet4{
+    height: 15.5%;
+    aspect-ratio: 1 / 1;
+    background-color: #E8814E;
+
+    position: absolute;
+    top: calc(calc(100% - 15.5%) / 2);
+    left: 35%;
+
+    border-radius: 50%;
+}
+
+#planet4::before{
+    content: "MARS";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*木星*/
+#planet5{
+    height: 25%;
+    aspect-ratio: 1 / 1;
+    background-color: #EDC882;
+
+    position: absolute;
+    top: calc(calc(100% - 25%) / 2);
+    left: 45%;
+
+    border-radius: 50%;
+}
+
+#planet5::before{
+    content: "JUPITER";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*土星*/
+#planet6{
+    height: 22.5%;
+    aspect-ratio: 1 / 1;
+    background-color: #C27F00;
+
+    position: absolute;
+    top: calc(calc(100% - 22.5%) / 2);
+    left: 60%;
+
+    border-radius: 50%;
+}
+
+#planet6::before{
+    content: "SATURN";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*天王星*/
+#planet7{
+    height: 17.5%;
+    aspect-ratio: 1 / 1;
+    background-color: #0CC0DF;
+
+    position: absolute;
+    top: calc(calc(100% - 17.5%) / 2);
+    left: 75%;
+
+    border-radius: 50%;
+}
+
+#planet7::before{
+    content: "URANUS";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*海王星*/
+#planet8{
+    height: 17.5%;
+    aspect-ratio: 1 / 1;
+    background-color: #3D15FF;
+
+    position: absolute;
+    top: calc(calc(100% - 17.5%) / 2);
+    left: 87.5%;
+
+    border-radius: 50%;
+}
+
+#planet8::before{
+    content: "NEPTUNE";
+    position: absolute;
+    width: 100%;
+    top: -40%;
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
