@@ -51,7 +51,7 @@
         camera.position.set(1, 1, 10);
         const controls = new THREE.OrbitControls(camera, document.querySelector("canvas"));
         controls.enableDamping = true;
-    
+
         const sizes = {
           width: innerWidth,
           height: innerHeight,
@@ -60,7 +60,7 @@
           antialias: true, // 地球の画質をよくする
           canvas: document.querySelector("canvas"),
         });
-    
+
         renderer.setSize(sizes.width, sizes.height);
         // 地球の画質をよくする
         renderer.setPixelRatio(window.devicePixelRatio);
@@ -70,7 +70,7 @@
         });
         const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphere);
-    
+
         function animate() {
           renderer.render(scene, camera);
           requestAnimationFrame(animate);
@@ -80,11 +80,11 @@
           // Update sizes
           sizes.width = innerWidth;
           sizes.height = innerHeight;
-    
+
           // Update camera
           camera.aspect = sizes.width / sizes.height;
           camera.updateProjectionMatrix();
-    
+
           // Update renderer
           renderer.setSize(sizes.width, sizes.height);
           renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
