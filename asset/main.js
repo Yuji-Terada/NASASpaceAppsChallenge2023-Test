@@ -1,25 +1,25 @@
-$("#header-open").click(function(){
-    $("#header-open").toggleClass("nav-view");
-    $("header").toggleClass("nav-view");
+$(window).on('load',function(){
+    $('#quote-container').addClass('appear');
+    $('header').addClass('appear');
+});
 
-    if($("#header-open").hasClass("nav-view")){
-        $("#header-button").removeClass("fa-angles-down");
-        $("#header-button").addClass("fa-angles-up");
-        console.log("a");
+/*
+function PageTopAnime() {
+    var scroll = $(window).scrollTop();
+
+    if(scroll >= 1500){   //上から400pxスクロールしたら
+        $("#quote-container").addClass("scrolled");
     }
     else{
-        $("#header-button").removeClass("fa-angles-up");
-        $("#header-button").addClass("fa-angles-down");
-        console.log("b");
+        $("#quote-container").removeClass("scrolled");
     }
-    
+}
+
+$(window).scroll(function (){
+    PageTopAnime();
 });
 
-const modal = document.querySelector("dialog");
-$(".planet").click(function(){
-    modal.showModal()
-});
-
-$("#modal-close").click(function(){
-    modal.close()
+$(window).on('load', function() {
+    PageTopAnime();
 })
+*/

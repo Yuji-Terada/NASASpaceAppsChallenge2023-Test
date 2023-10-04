@@ -2,12 +2,11 @@
 
 html, body{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #090909;
     
-    font-size: 62.5%;
     font-size: 10px;
-    font-family: "Alatsi";
+    font-family: "Montserrat", "Alatsi", "DM Serif Display";
 }
 
 /*==============================*/
@@ -26,15 +25,15 @@ header{
     z-index: 999;
     
     transform: translateY(-10vh);
-    transition: all .25s;
+    transition: all .8s;
 }
 
-header.nav-view{
+header.appear{
     transform: translateY(0);
 }
 
 #title{
-    width: 40%;
+    width: 5%;
     height: 100%;
 
     display: block;
@@ -42,12 +41,20 @@ header.nav-view{
     text-align: center;
     line-height: 10vh;
     font-size: 4rem;
-    color: #ffffff;
+    font-family: "Alatsi";
+    color: #bcbcbc;
     text-decoration: none;
+
+    transition: all .25s;
+}
+
+#header-span{
+    width: calc(100% - 5% - calc(12.5rem * 5));
+    display: block;
 }
 
 header .nav{
-    width: calc(calc(100% - 40%)/4);
+    width: 12.5rem;
     height: 100%;
 
     display: block;
@@ -55,6 +62,7 @@ header .nav{
     text-align: center;
     line-height: 10vh;
     font-size: 2.5rem;
+    font-family: "Alatsi";
     font-weight: normal;
     color: #bcbcbc;
     text-decoration: none;
@@ -62,30 +70,86 @@ header .nav{
     transition: all .25s;
 }
 
-header .nav:hover{
-    color: #ffffff;
+#title:hover, header .nav:hover{
+    color: #f0f0f0;
 }
 
-#header-open{
-    width: 7rem;
-    height: 3.5rem;
+a .material-symbols-outlined{
+    font-size: 5rem;
+    line-height: 10vh;
+}
 
+/*==============================*/
+
+#quote-img{
+    width: 100%;
+    height: 270vh;
+    display: block;
+    
+    margin: 0 auto 0 auto;
+    z-index: -1;
+
+    object-fit: cover;
+}
+
+#quote-container-container{
+    width: 100%;
+    height: 260vh;
     display: block;
 
-    position: fixed;
-    top: 10%;
-    left: 1%;
-    z-index: 999;
-
-    border: none;
-    border-radius: 0 0 1rem 1rem;
-    
-    transform: translateY(-10vh);
-    transition: all .25s;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-#header-open.nav-view{
-    transform: translateY(0);
+#quote-container{
+    width: 40%;
+    display: block;
+
+    padding: 2rem;
+
+    position: sticky;
+    top: 40vh;
+    left: calc(30% - 2rem);
+
+    background-color: #f0f0f055;
+    backdrop-filter: blur(0.25rem);
+
+    border-radius: 1rem;
+    border-bottom: #f0f0f0cc 1px solid;
+    border-right: #f0f0f0cc 1px solid;
+
+    text-align: center;
+
+    transition: all .8s;
+    transform: scale(0.4);
+}
+
+#quote-container.appear{
+    transform: scale(1);
+}
+
+#quote{
+    width: 100%;
+    display: block;
+
+    font-size: 4rem;
+    font-family: "DM serif display";
+    font-weight: normal;
+    line-height: 5.5rem;
+    letter-spacing: 0.1rem;
+    color: #f0f0f0;
+}
+
+#quote::after{
+    content: "Neil Armstrong (1930-2012)";
+    display: block;
+
+    font-size: 2.25rem;
+    font-family: "DM serif display";
+    font-weight: normal;
+    line-height: 5rem;
+    color: #f0f0f0;
 }
 
 /*==============================*/
@@ -93,224 +157,97 @@ header .nav:hover{
 main{
     width: 100%;
     height: 100%;
-}
-
-main #solar-system{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-
-    position: relative;
-}
-
-#solar-system #sun{
-    height: 80%;
-    aspect-ratio: 1 / 1;
-    background-color: #ffa800;
-
     display: block;
 
-    position: absolute;
-    top: 10%;
-    left: -35%;
-
-    border-radius: 50%;
+    margin-bottom: 100vh;
 }
 
-.planet{
+main #description{
+    width: 40%;
     display: block;
-    filter: drop-shadow(-16px 0 5px black);
+
+    padding: 2rem 30%;
+
+    background-color: #0C0838;
+
+    text-align: justify;
 }
 
-/*水星*/
-#planet1{
-    height: 10%;
-    aspect-ratio: 1 / 1;
-    background-color: #d9d9d9;
-
-    position: absolute;
-    top: calc(calc(100% - 10%) / 2);
-    left: 7.5%;
-
-    border-radius: 50%;
-}
-
-#planet1::before{
-    content: "MERCURY";
-    position: absolute;
+#description #desc-title{
     width: 100%;
-    top: -40%;
+    display: block;
 
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 3rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 7.5rem;
+    color: #f0f0f0;
 }
 
-/*金星*/
-#planet2{
-    height: 15%;
-    aspect-ratio: 1 / 1;
-    background-color: #FFDE59;
-
-    position: absolute;
-    top: calc(calc(100% - 15%) / 2);
-    left: 15%;
-
-    border-radius: 50%;
-}
-
-#planet2::before{
-    content: "VENUS";
-    position: absolute;
+#description #desc-context{
     width: 100%;
-    top: -40%;
+    display: block;
 
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.75rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+    line-height: 3rem;
+    color: #f0f0f0;
 }
 
-/*地球*/
-#planet3{
-    height: 15%;
-    aspect-ratio: 1 / 1;
-    background-color: #5271FF;
-
-    position: absolute;
-    top: calc(calc(100% - 15%) / 2);
-    left: 25%;
-
-    border-radius: 50%;
+#desc-context strong{
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 5rem;
 }
 
-#planet3::before{
-    content: "EARTH";
-    position: absolute;
-    width: 100%;
-    top: -40%;
+/*==================================================*/
+/*==================================================*/
+/*==================================================*/
 
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-}
+@media screen and (max-width: 900px) {
+    html{
+        -webkit-text-size-adjust: 100%;
+        font-size: 8px;
+    }
 
-/*火星*/
-#planet4{
-    height: 15.5%;
-    aspect-ratio: 1 / 1;
-    background-color: #E8814E;
+    header{
+        height: 7%;
+    }
 
-    position: absolute;
-    top: calc(calc(100% - 15.5%) / 2);
-    left: 35%;
+    #header-span{
+        display: none;
+    }
 
-    border-radius: 50%;
-}
+    header .nav{
+        width: calc(calc(100% - 10%)/5);
+        line-height: 7vh;
+        font-size: 1.75rem;
+        color: #f0f0f0;
+    }
 
-#planet4::before{
-    content: "MARS";
-    position: absolute;
-    width: 100%;
-    top: -40%;
+    #title{
+        width: 10%;
+        line-height: 7vh;
+    }
 
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-}
+    a .material-symbols-outlined{
+        font-size: 3rem;
+        line-height: 7vh;
+        color: #f0f0f0;
+    }
 
-/*木星*/
-#planet5{
-    height: 25%;
-    aspect-ratio: 1 / 1;
-    background-color: #EDC882;
+    #quote-container{
+        width: 80%;
 
-    position: absolute;
-    top: calc(calc(100% - 25%) / 2);
-    left: 45%;
+        padding: 1%;
 
-    border-radius: 50%;
-}
+        left: 9%;
+    }
 
-#planet5::before{
-    content: "JUPITER";
-    position: absolute;
-    width: 100%;
-    top: -40%;
+    main #description{
+        width: 80%;
 
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-}
-
-/*土星*/
-#planet6{
-    height: 22.5%;
-    aspect-ratio: 1 / 1;
-    background-color: #C27F00;
-
-    position: absolute;
-    top: calc(calc(100% - 22.5%) / 2);
-    left: 60%;
-
-    border-radius: 50%;
-}
-
-#planet6::before{
-    content: "SATURN";
-    position: absolute;
-    width: 100%;
-    top: -40%;
-
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-}
-
-/*天王星*/
-#planet7{
-    height: 17.5%;
-    aspect-ratio: 1 / 1;
-    background-color: #0CC0DF;
-
-    position: absolute;
-    top: calc(calc(100% - 17.5%) / 2);
-    left: 75%;
-
-    border-radius: 50%;
-}
-
-#planet7::before{
-    content: "URANUS";
-    position: absolute;
-    width: 100%;
-    top: -40%;
-
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-}
-
-/*海王星*/
-#planet8{
-    height: 17.5%;
-    aspect-ratio: 1 / 1;
-    background-color: #3D15FF;
-
-    position: absolute;
-    top: calc(calc(100% - 17.5%) / 2);
-    left: 87.5%;
-
-    border-radius: 50%;
-}
-
-#planet8::before{
-    content: "NEPTUNE";
-    position: absolute;
-    width: 100%;
-    top: -40%;
-
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
+        padding: 2rem 10%;
+    }
 }
