@@ -5,13 +5,8 @@ html, body{
     height: auto;
     background-color: #090909;
     
-    font-size: 62.5%;
     font-size: 10px;
     font-family: "Montserrat", "Alatsi", "DM Serif Display";
-
-    background-image: url("../image/bgi.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 /*==============================*/
@@ -38,7 +33,7 @@ header.appear{
 }
 
 #title{
-    width: 30%;
+    width: 5%;
     height: 100%;
 
     display: block;
@@ -47,12 +42,19 @@ header.appear{
     line-height: 10vh;
     font-size: 4rem;
     font-family: "Alatsi";
-    color: #ffffff;
+    color: #bcbcbc;
     text-decoration: none;
+
+    transition: all .25s;
+}
+
+#header-span{
+    width: calc(100% - 5% - calc(12.5rem * 5));
+    display: block;
 }
 
 header .nav{
-    width: calc(calc(100% - 30%)/5);
+    width: 12.5rem;
     height: 100%;
 
     display: block;
@@ -68,17 +70,36 @@ header .nav{
     transition: all .25s;
 }
 
-header .nav:hover{
-    color: #ffffff;
+#title:hover, header .nav:hover{
+    color: #f0f0f0;
+}
+
+a .material-symbols-outlined{
+    font-size: 5rem;
+    line-height: 10vh;
 }
 
 /*==============================*/
 
+#quote-img{
+    width: 100%;
+    height: 270vh;
+    display: block;
+    
+    margin: 0 auto 0 auto;
+    z-index: -1;
+
+    object-fit: cover;
+}
+
 #quote-container-container{
     width: 100%;
-    height: 220vh;
+    height: 260vh;
+    display: block;
 
-    margin-bottom: 15vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #quote-container{
@@ -89,14 +110,14 @@ header .nav:hover{
 
     position: sticky;
     top: 40vh;
-    left: 30%;
+    left: calc(30% - 2rem);
 
-    background-color: #ffffff55;
-    backdrop-filter: blur(0.5rem);
+    background-color: #f0f0f055;
+    backdrop-filter: blur(0.25rem);
 
     border-radius: 1rem;
-    border-bottom: #ffffffcc 1px solid;
-    border-right: #ffffffcc 1px solid;
+    border-bottom: #f0f0f0cc 1px solid;
+    border-right: #f0f0f0cc 1px solid;
 
     text-align: center;
 
@@ -142,10 +163,10 @@ main{
 }
 
 main #description{
-    width: 30%;
+    width: 40%;
     display: block;
 
-    padding: 2rem 35%;
+    padding: 2rem 30%;
 
     background-color: #0C0838;
 
@@ -178,4 +199,54 @@ main #description{
     font-size: 2.25rem;
     font-weight: 600;
     line-height: 5rem;
+}
+
+/*==================================================*/
+/*==================================================*/
+/*==================================================*/
+
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 8px;
+    }
+
+    header{
+        height: 7%;
+    }
+
+    #header-span{
+        display: none;
+    }
+
+    header .nav{
+        width: calc(calc(100% - 10%)/5);
+        line-height: 7vh;
+        font-size: 1.75rem;
+        color: #f0f0f0;
+    }
+
+    #title{
+        width: 10%;
+        line-height: 7vh;
+    }
+
+    a .material-symbols-outlined{
+        font-size: 3rem;
+        line-height: 7vh;
+        color: #f0f0f0;
+    }
+
+    #quote-container{
+        width: 80%;
+
+        padding: 1%;
+
+        left: 9%;
+    }
+
+    main #description{
+        width: 80%;
+
+        padding: 2rem 10%;
+    }
 }
