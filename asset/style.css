@@ -366,6 +366,31 @@ main #description{
     text-decoration: underline solid #0C0838ff 0.7rem;
 }
 
+footer{
+    width: 100%;
+    height: auto;
+    display: block;
+
+    margin-top: 5rem;
+
+    background-color: #f0f0f0;
+}
+
+footer p{
+    width: 60%;
+    display: block;
+
+    margin: auto;
+    padding: 2rem 0;
+
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+
 /*==============================*/
 /*==============================*/
 /*==============================*/
@@ -413,5 +438,34 @@ main #description{
         width: 80%;
 
         padding: 2rem 10%;
+    }
+
+    .gallery-wrap {
+        height: 10vh;
+    }
+
+    .gallery-item {
+        width: calc(100vw / 2.5);
+    }
+
+    .gallery-item > img{
+        filter: brightness(1);
+    }
+
+    #choice-desc-title{
+        width: 80%;
+    }
+    
+    #choice-desc-context{
+        width: 80%;
+    }
+
+    .choice-planet-item img{
+        filter: grayscale(0);
+    }
+
+    .choice-planet-item p{
+        font-weight: 700;
+        text-decoration: underline solid #0C0838ff 0.7rem;
     }
 }
