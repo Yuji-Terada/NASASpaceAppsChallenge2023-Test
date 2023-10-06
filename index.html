@@ -24,12 +24,17 @@
 
         <!--3D(globe.gl)読み込み-->
         <script src="//unpkg.com/globe.gl"></script>
+
+        <!--その他色々読み込み-->
+        <meta property="og:title" content="Planetary Tourism Office">
+        <meta property="og:url" content="SNS用URL">
+        <meta property="og:image" content="./image/shrinked.jpg">
     </head>
 
     <body>
         <!--ヘッダー部分-->
         <header>
-            <a href="./index.html" id="title">
+            <a href="./index.html" id="home">
                 <span class="material-symbols-outlined">home</span>
             </a>
             <span id="header-span"></span>
@@ -52,6 +57,7 @@
         
         <!--メイン部分-->
         <main>
+            <!--デスクリプションエリア-->
             <div id="description">
                 <p id="desc-title">Touch the Universe</p>
                 <p id="desc-context">
@@ -62,6 +68,43 @@
                     Now, let's go.
                 </p>
             </div>
+
+            <!--画像ギャラリーエリア-->
+            <div class="gallery-wrap">
+                <ul class="gallery-list gallery-list-left">
+                    <li class="gallery-item"><img src="./image/gallery/1.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/2.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/3.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/4.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/5.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/6.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/7.jpg"></li>
+                </ul>
+                <ul class="gallery-list gallery-list-left">
+                    <li class="gallery-item"><img src="./image/gallery/1.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/2.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/3.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/4.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/5.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/6.jpg"></li>
+                    <li class="gallery-item"><img src="./image/gallery/7.jpg"></li>
+                </ul>
+            </div>
+
+            <!--目的地選択エリア-->
+            <div id="choice">
+                <div id="choice-description">
+                    <p id="choice-desc-title">Where Shall We Go?</p>
+                    <p id="choice-desc-context">
+                        Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune...<br>
+                        You can go anywhere you like. Your journey starts from now, and the journey will not stop until you'll die. 
+                    </p>
+                </div>
+                <div id="choice-planet">
+                    <
+                </div>
+            </div>
+
         </main>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
