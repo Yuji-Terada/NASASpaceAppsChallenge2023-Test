@@ -304,7 +304,7 @@ main #description{
     margin: 0 auto;
 
     gap: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
     background-color: #0C0838;
 }
