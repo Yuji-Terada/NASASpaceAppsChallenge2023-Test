@@ -52,7 +52,7 @@ header.appear{
 }
 
 #header-span{
-    width: calc(100% - 7.5rem - calc(12.5rem * 5));
+    width: calc(100% - 7.5rem - calc(12.5rem * 4));
     display: block;
 }
 
