@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planetary Tourism Office</title>
+
+        <!--GoogleFonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!--GoogleIcons読み込み-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+
+        <!--CSS読み込み-->
+        <link rel="stylesheet" href="../asset/reset.css">
+
+        <link rel="stylesheet" href="./asset/style.css">
+
+        <!--アイコン読み込み-->
+        <script src="https://kit.fontawesome.com/2cd68e5bc6.js" crossorigin="anonymous"></script>
+
+        <!--3D(globe.gl)読み込み-->
+        <script src="//unpkg.com/globe.gl"></script>
+
+        <!--その他色々読み込み-->
+        <meta property="og:title" content="Planetary Tourism Office">
+        <meta property="og:url" content="SNS用URL">
+        <meta property="og:image" content="./image/shrinked.jpg">
+    </head>
+
+    <body>
+        <!--ヘッダー部分-->
+        <header>
+            <a href="../index.html" id="home">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <span id="header-span"></span>
+            <a href="#" class="nav">About</a>
+            <a href="#" class="nav">Reviews</a>
+            <a class="nav">Compare</a>
+            <a href="#" class="nav">Cost</a>
+            <a href="#" class="nav">Others</a>
+        </header>
+
+        <!--背景画像-->
+        
+        <!--メイン部分-->
+        <main>
+            <!--デスクリプション部分-->
+            <div id="desc">
+                <p id="desc-title">How Can We Compare Planets?</p>
+                <p id="desc-context">
+                    In the universe, there are quite a few stars and planets.<br>
+                    <strong>WHY DON'T YOU SEE THE TRUE FORM OF THE UNIVERSE?</strong>
+                </p>
+            </div>
+
+            <!--テーブル部分-->
+            <div id="table-container">
+                <!--テーブル選択用ボタン-->
+                <div id="table-button">
+                    <button class="table-button">Solar System</button>
+                    <button class="table-button">Compare 2-Planets</button>
+                </div>
+
+                <!--テーブル本体-->
+                <div id="table">
+                    <!--太陽系全体のテーブル-->
+                    <div id="table1">
+                        <!--質量-->
+                        <table id="table-1-1">
+                            <caption id="table-1-1-caption"></caption>
+                            <tr>
+                                <th id="table-1-1-1-1"></th>
+                                <th id="table-1-1-1-2"></th>
+                                <th id="table-1-1-1-3"></th>
+                                <th id="table-1-1-1-4"></th>
+                                <th id="table-1-1-1-5"></th>
+                                <th id="table-1-1-1-6"></th>
+                                <th id="table-1-1-1-7"></th>
+                                <th id="table-1-1-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-1-2-1"></td>
+                                <td id="table-1-1-2-2"></td>
+                                <td id="table-1-1-2-3"></td>
+                                <td id="table-1-1-2-4"></td>
+                                <td id="table-1-1-2-5"></td>
+                                <td id="table-1-1-2-6"></td>
+                                <td id="table-1-1-2-7"></td>
+                                <td id="table-1-1-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--直径-->
+                        <table id="table1-2">
+                            <caption id="table-1-2-caption"></caption>
+                            <tr>
+                                <th id="table-1-2-1-1"></th>
+                                <th id="table-1-2-1-2"></th>
+                                <th id="table-1-2-1-3"></th>
+                                <th id="table-1-2-1-4"></th>
+                                <th id="table-1-2-1-5"></th>
+                                <th id="table-1-2-1-6"></th>
+                                <th id="table-1-2-1-7"></th>
+                                <th id="table-1-2-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-2-2-1"></td>
+                                <td id="table-1-2-2-2"></td>
+                                <td id="table-1-2-2-3"></td>
+                                <td id="table-1-2-2-4"></td>
+                                <td id="table-1-2-2-5"></td>
+                                <td id="table-1-2-2-6"></td>
+                                <td id="table-1-2-2-7"></td>
+                                <td id="table-1-2-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--密度-->
+                        <table id="table1-3">
+                            <caption id="table-1-3-caption"></caption>
+                            <tr>
+                                <th id="table-1-3-1-1"></th>
+                                <th id="table-1-3-1-2"></th>
+                                <th id="table-1-3-1-3"></th>
+                                <th id="table-1-3-1-4"></th>
+                                <th id="table-1-3-1-5"></th>
+                                <th id="table-1-3-1-6"></th>
+                                <th id="table-1-3-1-7"></th>
+                                <th id="table-1-3-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-3-2-1"></td>
+                                <td id="table-1-3-2-2"></td>
+                                <td id="table-1-3-2-3"></td>
+                                <td id="table-1-3-2-4"></td>
+                                <td id="table-1-3-2-5"></td>
+                                <td id="table-1-3-2-6"></td>
+                                <td id="table-1-3-2-7"></td>
+                                <td id="table-1-3-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--重力加速度-->
+                        <table id="table1-4">
+                            <caption id="table-1-4-caption"></caption>
+                            <tr>
+                                <th id="table-1-4-1-1"></th>
+                                <th id="table-1-4-1-2"></th>
+                                <th id="table-1-4-1-3"></th>
+                                <th id="table-1-4-1-4"></th>
+                                <th id="table-1-4-1-5"></th>
+                                <th id="table-1-4-1-6"></th>
+                                <th id="table-1-4-1-7"></th>
+                                <th id="table-1-4-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-4-2-1"></td>
+                                <td id="table-1-4-2-2"></td>
+                                <td id="table-1-4-2-3"></td>
+                                <td id="table-1-4-2-4"></td>
+                                <td id="table-1-4-2-5"></td>
+                                <td id="table-1-4-2-6"></td>
+                                <td id="table-1-4-2-7"></td>
+                                <td id="table-1-4-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--脱出速度（第2宇宙速度）-->
+                        <table id="table1-5">
+                            <caption id="table-1-5-caption"></caption>
+                            <tr>
+                                <th id="table-1-5-1-1"></th>
+                                <th id="table-1-5-1-2"></th>
+                                <th id="table-1-5-1-3"></th>
+                                <th id="table-1-5-1-4"></th>
+                                <th id="table-1-5-1-5"></th>
+                                <th id="table-1-5-1-6"></th>
+                                <th id="table-1-5-1-7"></th>
+                                <th id="table-1-5-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-5-2-1"></td>
+                                <td id="table-1-5-2-2"></td>
+                                <td id="table-1-5-2-3"></td>
+                                <td id="table-1-5-2-4"></td>
+                                <td id="table-1-5-2-5"></td>
+                                <td id="table-1-5-2-6"></td>
+                                <td id="table-1-5-2-7"></td>
+                                <td id="table-1-5-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--自転周期-->
+                        <table id="table1-6">
+                            <caption id="table-1-6-caption"></caption>
+                            <tr>
+                                <th id="table-1-6-1-1"></th>
+                                <th id="table-1-6-1-2"></th>
+                                <th id="table-1-6-1-3"></th>
+                                <th id="table-1-6-1-4"></th>
+                                <th id="table-1-6-1-5"></th>
+                                <th id="table-1-6-1-6"></th>
+                                <th id="table-1-6-1-7"></th>
+                                <th id="table-1-6-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-6-2-1"></td>
+                                <td id="table-1-6-2-2"></td>
+                                <td id="table-1-6-2-3"></td>
+                                <td id="table-1-6-2-4"></td>
+                                <td id="table-1-6-2-5"></td>
+                                <td id="table-1-6-2-6"></td>
+                                <td id="table-1-6-2-7"></td>
+                                <td id="table-1-6-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--1日（正午から真夜中まで）-->
+                        <table id="table1-7">
+                            <caption id="table-1-7-caption"></caption>
+                            <tr>
+                                <th id="table-1-7-1-1"></th>
+                                <th id="table-1-7-1-2"></th>
+                                <th id="table-1-7-1-3"></th>
+                                <th id="table-1-7-1-4"></th>
+                                <th id="table-1-7-1-5"></th>
+                                <th id="table-1-7-1-6"></th>
+                                <th id="table-1-7-1-7"></th>
+                                <th id="table-1-7-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-7-2-1"></td>
+                                <td id="table-1-7-2-2"></th>
+                                <td id="table-1-7-2-3"></td>
+                                <td id="table-1-7-2-4"></td>
+                                <td id="table-1-7-2-5"></td>
+                                <td id="table-1-7-2-6"></td>
+                                <td id="table-1-7-2-7"></td>
+                                <td id="table-1-7-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--太陽からの距離-->
+                        <table id="table1-8">
+                            <caption id="table-1-8-caption"></caption>
+                            <tr>
+                                <th id="table-1-8-1-1"></th>
+                                <th id="table-1-8-1-2"></th>
+                                <th id="table-1-8-1-3"></th>
+                                <th id="table-1-8-1-4"></th>
+                                <th id="table-1-8-1-5"></th>
+                                <th id="table-1-8-1-6"></th>
+                                <th id="table-1-8-1-7"></th>
+                                <th id="table-1-8-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-8-2-1"></td>
+                                <td id="table-1-8-2-2"></td>
+                                <td id="table-1-8-2-3"></td>
+                                <td id="table-1-8-2-4"></td>
+                                <td id="table-1-8-2-5"></td>
+                                <td id="table-1-8-2-6"></td>
+                                <td id="table-1-8-2-7"></td>
+                                <td id="table-1-8-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--近日点のときの距離-->
+                        <table id="table1-9">
+                            <caption id="table-1-9-caption"></caption>
+                            <tr>
+                                <th id="table-1-9-1-1"></th>
+                                <th id="table-1-9-1-2"></th>
+                                <th id="table-1-9-1-3"></th>
+                                <th id="table-1-9-1-4"></th>
+                                <th id="table-1-9-1-5"></th>
+                                <th id="table-1-9-1-6"></th>
+                                <th id="table-1-9-1-7"></th>
+                                <th id="table-1-9-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-9-2-1"></td>
+                                <td id="table-1-9-2-2"></td>
+                                <td id="table-1-9-2-3"></td>
+                                <td id="table-1-9-2-4"></td>
+                                <td id="table-1-9-2-5"></td>
+                                <td id="table-1-9-2-6"></td>
+                                <td id="table-1-9-2-7"></td>
+                                <td id="table-1-9-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--遠日点のときの距離-->
+                        <table id="table1-10">
+                            <caption id="table-1-10-caption"></caption>
+                            <tr>
+                                <th id="table-1-10-1-1"></th>
+                                <th id="table-1-10-1-2"></th>
+                                <th id="table-1-10-1-3"></th>
+                                <th id="table-1-10-1-4"></th>
+                                <th id="table-1-10-1-5"></th>
+                                <th id="table-1-10-1-6"></th>
+                                <th id="table-1-10-1-7"></th>
+                                <th id="table-1-10-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-10-2-1"></td>
+                                <td id="table-1-10-2-2"></td>
+                                <td id="table-1-10-2-3"></td>
+                                <td id="table-1-10-2-4"></td>
+                                <td id="table-1-10-2-5"></td>
+                                <td id="table-1-10-2-6"></td>
+                                <td id="table-1-10-2-7"></td>
+                                <td id="table-1-10-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--公転周期-->
+                        <table id="table1-11">
+                            <caption id="table-1-11-caption"></caption>
+                            <tr>
+                                <th id="table-1-11-1-1"></th>
+                                <th id="table-1-11-1-2"></th>
+                                <th id="table-1-11-1-3"></th>
+                                <th id="table-1-11-1-4"></th>
+                                <th id="table-1-11-1-5"></th>
+                                <th id="table-1-11-1-6"></th>
+                                <th id="table-1-11-1-7"></th>
+                                <th id="table-1-11-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-11-2-1"></td>
+                                <td id="table-1-11-2-2"></td>
+                                <td id="table-1-11-2-3"></td>
+                                <td id="table-1-11-2-4"></td>
+                                <td id="table-1-11-2-5"></td>
+                                <td id="table-1-11-2-6"></td>
+                                <td id="table-1-11-2-7"></td>
+                                <td id="table-1-11-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--公転速度-->
+                        <table id="table1-12">
+                            <caption id="table-1-12-caption"></caption>
+                            <tr>
+                                <th id="table-1-12-1-1"></th>
+                                <th id="table-1-12-1-2"></th>
+                                <th id="table-1-12-1-3"></th>
+                                <th id="table-1-12-1-4"></th>
+                                <th id="table-1-12-1-5"></th>
+                                <th id="table-1-12-1-6"></th>
+                                <th id="table-1-12-1-7"></th>
+                                <th id="table-1-12-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-12-2-1"></td>
+                                <td id="table-1-12-2-2"></td>
+                                <td id="table-1-12-2-3"></td>
+                                <td id="table-1-12-2-4"></td>
+                                <td id="table-1-12-2-5"></td>
+                                <td id="table-1-12-2-6"></td>
+                                <td id="table-1-12-2-7"></td>
+                                <td id="table-1-12-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--太陽公転面との公転面角度-->
+                        <table id="table1-13">
+                            <caption id="table-1-13-caption"></caption>
+                            <tr>
+                                <th id="table-1-13-1-1"></th>
+                                <th id="table-1-13-1-2"></th>
+                                <th id="table-1-13-1-3"></th>
+                                <th id="table-1-13-1-4"></th>
+                                <th id="table-1-13-1-5"></th>
+                                <th id="table-1-13-1-6"></th>
+                                <th id="table-1-13-1-7"></th>
+                                <th id="table-1-13-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-13-2-1"></td>
+                                <td id="table-1-13-2-2"></td>
+                                <td id="table-1-13-2-3"></td>
+                                <td id="table-1-13-2-4"></td>
+                                <td id="table-1-13-2-5"></td>
+                                <td id="table-1-13-2-6"></td>
+                                <td id="table-1-13-2-7"></td>
+                                <td id="table-1-13-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--公転軌道の楕円度-->
+                        <table id="table1-14">
+                            <caption id="table-1-14-caption"></caption>
+                            <tr>
+                                <th id="table-1-14-1-1"></th>
+                                <th id="table-1-14-1-2"></th>
+                                <th id="table-1-14-1-3"></th>
+                                <th id="table-1-14-1-4"></th>
+                                <th id="table-1-14-1-5"></th>
+                                <th id="table-1-14-1-6"></th>
+                                <th id="table-1-14-1-7"></th>
+                                <th id="table-1-14-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-14-2-1"></td>
+                                <td id="table-1-14-2-2"></td>
+                                <td id="table-1-14-2-3"></td>
+                                <td id="table-1-14-2-4"></td>
+                                <td id="table-1-14-2-5"></td>
+                                <td id="table-1-14-2-6"></td>
+                                <td id="table-1-14-2-7"></td>
+                                <td id="table-1-14-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--自転軸角度-->
+                        <table id="table1-15">
+                            <caption id="table-1-15-caption"></caption>
+                            <tr>
+                                <th id="table-1-15-1-1"></th>
+                                <th id="table-1-15-1-2"></th>
+                                <th id="table-1-15-1-3"></th>
+                                <th id="table-1-15-1-4"></th>
+                                <th id="table-1-15-1-5"></th>
+                                <th id="table-1-15-1-6"></th>
+                                <th id="table-1-15-1-7"></th>
+                                <th id="table-1-15-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-15-2-1"></td>
+                                <td id="table-1-15-2-2"></td>
+                                <td id="table-1-15-2-3"></td>
+                                <td id="table-1-15-2-4"></td>
+                                <td id="table-1-15-2-5"></td>
+                                <td id="table-1-15-2-6"></td>
+                                <td id="table-1-15-2-7"></td>
+                                <td id="table-1-15-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--平均気温-->
+                        <table id="table1-16">
+                            <caption id="table-1-16-caption"></caption>
+                            <tr>
+                                <th id="table-1-16-1-1"></th>
+                                <th id="table-1-16-1-2"></th>
+                                <th id="table-1-16-1-3"></th>
+                                <th id="table-1-16-1-4"></th>
+                                <th id="table-1-16-1-5"></th>
+                                <th id="table-1-16-1-6"></th>
+                                <th id="table-1-16-1-7"></th>
+                                <th id="table-1-16-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-16-2-1"></td>
+                                <td id="table-1-16-2-2"></td>
+                                <td id="table-1-16-2-3"></td>
+                                <td id="table-1-16-2-4"></td>
+                                <td id="table-1-16-2-5"></td>
+                                <td id="table-1-16-2-6"></td>
+                                <td id="table-1-16-2-7"></td>
+                                <td id="table-1-16-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--海面気圧-->
+                        <table id="table1-17">
+                            <caption id="table-1-17-caption"></caption>
+                            <tr>
+                                <th id="table-1-17-1-1"></th>
+                                <th id="table-1-17-1-2"></th>
+                                <th id="table-1-17-1-3"></th>
+                                <th id="table-1-17-1-4"></th>
+                                <th id="table-1-17-1-5"></th>
+                                <th id="table-1-17-1-6"></th>
+                                <th id="table-1-17-1-7"></th>
+                                <th id="table-1-17-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-17-2-1"></td>
+                                <td id="table-1-17-2-2"></td>
+                                <td id="table-1-17-2-3"></td>
+                                <td id="table-1-17-2-4"></td>
+                                <td id="table-1-17-2-5"></td>
+                                <td id="table-1-17-2-6"></td>
+                                <td id="table-1-17-2-7"></td>
+                                <td id="table-1-17-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--衛星の数-->
+                        <table id="table1-18">
+                            <caption id="table-1-18-caption"></caption>
+                            <tr>
+                                <th id="table-1-18-1-1"></th>
+                                <th id="table-1-18-1-2"></th>
+                                <th id="table-1-18-1-3"></th>
+                                <th id="table-1-18-1-4"></th>
+                                <th id="table-1-18-1-5"></th>
+                                <th id="table-1-18-1-6"></th>
+                                <th id="table-1-18-1-7"></th>
+                                <th id="table-1-18-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-18-2-1"></td>
+                                <td id="table-1-18-2-2"></td>
+                                <td id="table-1-18-2-3"></td>
+                                <td id="table-1-18-2-4"></td>
+                                <td id="table-1-18-2-5"></td>
+                                <td id="table-1-18-2-6"></td>
+                                <td id="table-1-18-2-7"></td>
+                                <td id="table-1-18-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--惑星環が存在するか-->
+                        <table id="table1-19">
+                            <caption id="table-1-19-caption"></caption>
+                            <tr>
+                                <th id="table-1-19-1-1"></th>
+                                <th id="table-1-19-1-2"></th>
+                                <th id="table-1-19-1-3"></th>
+                                <th id="table-1-19-1-4"></th>
+                                <th id="table-1-19-1-5"></th>
+                                <th id="table-1-19-1-6"></th>
+                                <th id="table-1-19-1-7"></th>
+                                <th id="table-1-19-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-19-2-1"></td>
+                                <td id="table-1-19-2-2"></td>
+                                <td id="table-1-19-2-3"></td>
+                                <td id="table-1-19-2-4"></td>
+                                <td id="table-1-19-2-5"></td>
+                                <td id="table-1-19-2-6"></td>
+                                <td id="table-1-19-2-7"></td>
+                                <td id="table-1-19-2-8"></td>
+                            </tr>
+                        </table>
+
+                        <!--地球規模の磁場が存在するか-->
+                        <table id="table1-20">
+                            <caption id="table-1-20-caption"></caption>
+                            <tr>
+                                <th id="table-1-20-1-1"></th>
+                                <th id="table-1-20-1-2"></th>
+                                <th id="table-1-20-1-3"></th>
+                                <th id="table-1-20-1-4"></th>
+                                <th id="table-1-20-1-5"></th>
+                                <th id="table-1-20-1-6"></th>
+                                <th id="table-1-20-1-7"></th>
+                                <th id="table-1-20-1-8"></th>
+                            </tr>
+
+                            <tr>
+                                <td id="table-1-20-2-1"></td>
+                                <td id="table-1-20-2-2"></td>
+                                <td id="table-1-20-2-3"></td>
+                                <td id="table-1-20-2-4"></td>
+                                <td id="table-1-20-2-5"></td>
+                                <td id="table-1-20-2-6"></td>
+                                <td id="table-1-20-2-7"></td>
+                                <td id="table-1-20-2-8"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--任意の2星比較用のテーブル-->
+                    <div id="table2">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                This website is made for NASA Space Apps Challenge Kushimoto 2023.
+            </p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./asset/main.js"></script>
+        <script src="./asset/csv.js"></script>
+    </body>
+</html>
