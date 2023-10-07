@@ -39,17 +39,11 @@ a{
     color: #ffff;
 }
 
-.columbiahills a p{
-    margin: -24.5% auto auto 84%;
+.greatredspot a p{
+    margin: -23% auto auto 38%;
 }
-.columbiahills a img{
-    margin: -25% auto auto 93%;
-}
-.olympusmons a p{
-    margin: -34% auto auto 15%;
-}
-.olympusmons a img{
-    margin: -34% auto auto 9.5%;
+.greatredspot a img{
+    margin: -23% auto auto 33%;
 }
 .open{
     position: fixed;
