@@ -39,13 +39,14 @@
             </a>
             <span id="header-span"></span>
             <a href="#" class="nav">About</a>
-            <a href="#" class="nav">Reviews</a>
+            <a href="../-review/review.html" class="nav">Review</a>
             <a class="nav">Compare</a>
             <a href="#" class="nav">Cost</a>
             <a href="#" class="nav">Others</a>
         </header>
 
         <!--背景画像-->
+        <img src="./image/bgi.jpg" id="background-img" alt="background">
         
         <!--メイン部分-->
         <main>
@@ -53,7 +54,7 @@
             <div id="desc">
                 <p id="desc-title">How Can We Compare Planets?</p>
                 <p id="desc-context">
-                    In the universe, there are quite a few stars and planets.<br>
+                    In the universe, there are quite a few stars and planets. And also, the diversity of space objects is too rich to compare their features well. Mass, Radius, Pressure, Temperature, Number of Moons... We can compare them from various perspectives, and it must lead you to be more curious about the universe.<br>
                     <strong>WHY DON'T YOU SEE THE TRUE FORM OF THE UNIVERSE?</strong>
                 </p>
             </div>
@@ -62,14 +63,14 @@
             <div id="table-container">
                 <!--テーブル選択用ボタン-->
                 <div id="table-button">
-                    <button class="table-button">Solar System</button>
-                    <button class="table-button">Compare 2-Planets</button>
+                    <button class="table-button view" id="solar-system">Solar System</button>
+                    <button class="table-button" id="compare">Compare 2-Planets</button>
                 </div>
 
                 <!--テーブル本体-->
                 <div id="table">
                     <!--太陽系全体のテーブル-->
-                    <div id="table1">
+                    <div id="table1" class="view">
                         <!--質量-->
                         <table id="table-1-1">
                             <caption id="table-1-1-caption"></caption>
@@ -593,7 +594,177 @@
 
                     <!--任意の2星比較用のテーブル-->
                     <div id="table2">
+                        <form name="planetChoice">
+                            <!--比較対象 星1-->
+                            <div>
+                                <label for="planet1">Planet-1</label>
+                                <select name="planet1" id="form-planet1" required>
+                                    <option value="1">1 Mercury</option>
+                                    <option value="2">2 Venus</option>
+                                    <option value="3" selected>3 Earth</option>
+                                    <option value="4">4 Mars</option>
+                                    <option value="5">5 Jupiter</option>
+                                    <option value="6">6 Saturn</option>
+                                    <option value="7">7 Uranus</option>
+                                    <option value="8">8 Neptune</option>
+                                </select>
+                            </div>
+                            
+                            <!--比較対象 星2-->
+                            <div>
+                                <label for="planet2">Planet-2</label>
+                                <select name="planet2" id="form-planet2" required>
+                                    <option value="1">1 Mercury</option>
+                                    <option value="2">2 Venus</option>
+                                    <option value="3">3 Earth</option>
+                                    <option value="4" selected>4 Mars</option>
+                                    <option value="5">5 Jupiter</option>
+                                    <option value="6">6 Saturn</option>
+                                    <option value="7">7 Uranus</option>
+                                    <option value="8">8 Neptune</option>
+                                </select>
+                            </div>
 
+                            <!--更新ボタン-->
+                            <input type="button" id="form-update" value="Update" onclick="updateTable()">
+                        </form>
+
+                        
+                        <!--比較テーブル-->
+                        <table id="table-compare">
+                            <caption></caption>
+                            <tr>
+                                <th id="table-2-0-0">Feature</th>
+                                <th id="table-2-0-1"></th>
+                                <th id="table-2-0-2"></th>
+                                <th id="table-2-0-3">Difference</th>
+                            </tr>
+                            <tr>
+                                <td id="table-2-1-0"></td>
+                                <td id="table-2-1-1"></td>
+                                <td id="table-2-1-2"></td>
+                                <td id="table-2-1-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-2-0"></td>
+                                <td id="table-2-2-1"></td>
+                                <td id="table-2-2-2"></td>
+                                <td id="table-2-2-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-3-0"></td>
+                                <td id="table-2-3-1"></td>
+                                <td id="table-2-3-2"></td>
+                                <td id="table-2-3-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-4-0"></td>
+                                <td id="table-2-4-1"></td>
+                                <td id="table-2-4-2"></td>
+                                <td id="table-2-4-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-5-0"></td>
+                                <td id="table-2-5-1"></td>
+                                <td id="table-2-5-2"></td>
+                                <td id="table-2-5-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-6-0"></td>
+                                <td id="table-2-6-1"></td>
+                                <td id="table-2-6-2"></td>
+                                <td id="table-2-6-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-7-0"></td>
+                                <td id="table-2-7-1"></td>
+                                <td id="table-2-7-2"></td>
+                                <td id="table-2-7-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-8-0"></td>
+                                <td id="table-2-8-1"></td>
+                                <td id="table-2-8-2"></td>
+                                <td id="table-2-8-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-9-0"></td>
+                                <td id="table-2-9-1"></td>
+                                <td id="table-2-9-2"></td>
+                                <td id="table-2-9-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-10-0"></td>
+                                <td id="table-2-10-1"></td>
+                                <td id="table-2-10-2"></td>
+                                <td id="table-2-10-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-11-0"></td>
+                                <td id="table-2-11-1"></td>
+                                <td id="table-2-11-2"></td>
+                                <td id="table-2-11-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-12-0"></td>
+                                <td id="table-2-12-1"></td>
+                                <td id="table-2-12-2"></td>
+                                <td id="table-2-12-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-13-0"></td>
+                                <td id="table-2-13-1"></td>
+                                <td id="table-2-13-2"></td>
+                                <td id="table-2-13-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-14-0"></td>
+                                <td id="table-2-14-1"></td>
+                                <td id="table-2-14-2"></td>
+                                <td id="table-2-14-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-15-0"></td>
+                                <td id="table-2-15-1"></td>
+                                <td id="table-2-15-2"></td>
+                                <td id="table-2-15-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-16-0"></td>
+                                <td id="table-2-16-1"></td>
+                                <td id="table-2-16-2"></td>
+                                <td id="table-2-16-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-17-0"></td>
+                                <td id="table-2-17-1"></td>
+                                <td id="table-2-17-2"></td>
+                                <td id="table-2-17-3"></td>
+                            </tr>
+
+                            <tr>
+                                <td id="table-2-18-0"></td>
+                                <td id="table-2-18-1"></td>
+                                <td id="table-2-18-2"></td>
+                                <td id="table-2-18-3"></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -607,6 +778,5 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="./asset/main.js"></script>
-        <script src="./asset/csv.js"></script>
     </body>
 </html>
