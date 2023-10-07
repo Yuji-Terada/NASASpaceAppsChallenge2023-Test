@@ -1,0 +1,140 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700&display=swap");
+
+
+html body{
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: 'Century Gothic';
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+}
+a{
+    text-decoration:none;
+}
+#back{
+    position: fixed;
+    margin: 2% 3% auto 1%;
+}
+.name h1{
+    position: relative;
+    text-align: center;
+    margin-top: 5rem;
+    color:#ffff;
+    font-size: 12rem;
+}
+.map img{
+    width: 100%;
+}
+.spots img{
+    position: absolute;
+}
+.spots p{
+    position: absolute;
+    font-size: 2.5rem;
+    color: #ffff;
+}
+
+.greatdarkspot a p{
+    margin: -24.5% auto auto 56%;
+}
+.greatdarkspot a img{
+    margin: -25% auto auto 51%;
+}
+.open{
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    margin: -49% auto auto 95%;
+}
+.open span{
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #ff0000;
+    width: 45%;
+}
+.open span:nth-of-type(1){
+    top: 15px;
+}
+.open span:nth-of-type(2){
+    top: 23px;
+}
+.open span:nth-of-type(3){
+    top: 31px;
+}
+.open.active span:nth-of-type(1){
+    top: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.open.active span:nth-of-type(2){
+    opacity: 0;
+}
+.open.active span:nth-of-type(3){
+    top: 30px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav.panelactive #g-nav-list{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scoroling: touch;
+}
+
+#g-nav ul{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #ff0000;
+    padding: 10px;
+}
+
+#g-nav{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -120%;
+    width: 25%;
+    height: 100vh;
+    background: #000000;
+    transition: all 0.6s;
+}
+
+#g-nav.panelactive{
+    right: 0;
+}
+.g-nav-list ul li a{
+    color: #ffff;
+    font-size: 3rem;
+    text-align: left;
+    transition: 0.3s;
+}
+.g-nav-list ul li a:hover{
+    transition: 0.3s;
+    border-bottom: solid 1px #ffff;
+}

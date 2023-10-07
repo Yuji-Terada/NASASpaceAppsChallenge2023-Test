@@ -5,6 +5,10 @@
 html body{
     font-family: serif;
 }
+a{
+    text-decoration: none;
+    color: #ffff;
+}
 html, body{
     font-family: 'Century Gothic';
     width: 100%;
@@ -74,13 +78,14 @@ a .material-symbols-outlined{
     line-height: 10vh;
 }
 #back{
-    position: absolute;
+    position: fixed;
     top: 10vh;
     left: 0;
     width: 7.5rem;
     height: 7.5rem;
     text-align: center;
 }
+
 .leftside{
     position: absolute;
     text-align: left;
@@ -118,6 +123,25 @@ a .material-symbols-outlined{
 star{
     width: 100%;
 }
+.satellites {
+    position: absolute;
+    margin-left: 10%;
+}
+.satellites img{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+.satellites p{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: -1rem;;
+}
+.comment h1{
+    font-size: 10rem;
+    text-align: center;
+}
+
 
 canvas {
     position: absolute;
