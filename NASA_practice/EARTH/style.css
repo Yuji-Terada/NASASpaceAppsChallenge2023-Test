@@ -74,8 +74,18 @@ a .material-symbols-outlined{
     line-height: 10vh;
 }
 #back{
-    position: absolute;
-    margin: 2% auto auto 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10% auto auto 3%;
+    width:100%;
+    background:url('../NASA_back.png');
+    object-fit: cover;
+    z-index: 999;
+    background-color: #fff;
+}
+#back:hover{
+    background:url('../NASA_back_hover.png');
 }
 .name h1{
     position: relative;
@@ -83,6 +93,10 @@ a .material-symbols-outlined{
     margin-top: 5rem;
     color:#ffff;
     font-size: 12rem;
+
+    background-color: #ff0000;
+
+    display: none;
 }
 .leftside{
     position: absolute;
