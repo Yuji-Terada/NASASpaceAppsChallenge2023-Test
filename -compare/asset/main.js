@@ -77,6 +77,7 @@ function updateTable() {
 
     if(planet1 == planet2){
         alert("Chosen Planets Are the Same.\nPlease Fill it again");
+        return;
     }
 
     document.getElementById("table-2-0-1").innerHTML = values[0][planet1];

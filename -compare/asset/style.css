@@ -45,7 +45,7 @@ header{
 }
 
 #header-span{
-    width: calc(100% - 7.5rem - calc(12.5rem * 5));
+    width: calc(100% - 7.5rem - calc(12.5rem * 4));
     display: block;
 }
 
@@ -200,6 +200,7 @@ main{
 
     margin: 0 10%;
 
+    backdrop-filter: blur(0.25rem);
     background-color: #f0f0f055;
 
     border: #e9faf9 1px solid;
@@ -478,7 +479,7 @@ footer p{
     }
 
     header .nav{
-        width: calc(calc(100% - 7.5rem)/5);
+        width: calc(calc(100% - 7.5rem)/4);
         line-height: 7vh;
         font-size: 1.75rem;
         color: #f0f0f0;
@@ -492,5 +493,56 @@ footer p{
         font-size: 3rem;
         line-height: 7vh;
         color: #f0f0f0;
+    }
+    
+    main{
+        width: 100%;
+        margin-top: 7vh;
+    }
+
+    #desc-title{
+        width: 80%;
+    }
+    
+    #desc-context{
+        width: 80%;
+    }
+
+    #table-button button{
+        font-size: 2rem;
+    }
+
+    #table1 table caption{
+        font-size: 2rem;
+    }
+
+    #table1 table, #table2 table{
+        white-space: nowrap;
+    }
+
+    .table-container{
+        overflow-x: scroll;
+    }
+
+    #table2 form{
+        width: 80%;
+        display: block;
+    }
+
+    #table2 form div{
+        width: 100%;
+    }
+    
+    #table2 form div label{
+        width: 40%;
+    }
+    
+    #table2 form div select{
+        width: 60%;
+    }
+    
+    #form-update{
+        width: 50%;
+        margin: 1rem auto;
     }
 }
