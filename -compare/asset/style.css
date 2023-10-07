@@ -3,10 +3,7 @@
 html, body{
     width: 100%;
     height: auto;
-    /*
-    background-color: #090909;
-    */
-    background-color: #0C0838;
+    background-color: #0C083800;
     
     font-size: 10px;
     font-family: "Montserrat", "Alatsi", "DM Serif Display";
@@ -17,7 +14,7 @@ html, body{
 header{
     width: 100%;
     height: 10%;
-    background-color: #ffffff55;
+    background-color: #f0f0f055;
 
     display: flex;
     justify-content: center;
@@ -27,12 +24,8 @@ header{
     left: 0;
     z-index: 999;
     
-    transform: translateY(-10vh);
-    transition: all .8s;
-}
-
-header.appear{
     transform: translateY(0);
+    transition: all .8s;
 }
 
 #home{
@@ -84,6 +77,25 @@ a .material-symbols-outlined{
 
 /*==============================*/
 
+#background-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+/*==============================*/
+
 main{
     width: 100%;
     height: 100%;
@@ -98,7 +110,10 @@ main{
     width: 100%;
     display: block;
 
+    margin: 2rem 0;
     padding: 3rem 0;
+
+    background-color: #0C0838;
 }
 
 #desc-title{
@@ -117,32 +132,95 @@ main{
 
 #desc-context{
     width: 40%;
+    height: auto;
     display: block;
 
     margin: 0 auto;
 
     font-family: "Montserrat", sans-serif;
     font-size: 1.75rem;
-    font-weight: 500;
+    font-weight: 400;
     text-align: justify;
-    line-height: 2rem;
+    line-height: 2.5rem;
     color: #f0f0f0;
 }
 
 #desc-context strong{
     font-weight: 600;
     font-size: 2.25rem;
-    line-height: 2.25rem;
+    line-height: 3.5rem;
 }
 
 /*==============================*/
 
-#table1 table{
+#table-button{
     width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
 
-    margin: 3rem 10%;
+    margin: 0 10%;
+}
+
+#table-button button{
+    width: auto;
+    height: auto;
+    display: block;
+
+    padding: 2rem 3rem;
+    margin-right: 1.5rem;
+
+    border: none;
+
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+    font-weight: 600;
+    text-align: center;
+    line-height: 3rem;
+
+    cursor: pointer;
+
+    transition: all .25s;
+}
+
+#solar-system, #compare{
+    background-color: #bcbcbc;
+}
+
+#solar-system.view, #compare.view{
+    background-color: #e9faf9;
+}
+
+/*==============================*/
+
+#table{
+    width: 80%;
+    height: auto;
+    display: block;
+
+    margin: 0 10%;
+
+    background-color: #f0f0f055;
+
+    border: #e9faf9 1px solid;
+    border-radius: 0 3rem 3rem 3rem;
+}
+
+#table1{
+    width: 90%;
+    display: none;
+
+    margin: 3rem 5%;
 
     text-align: center;
+}
+
+#table1.view{
+    display: block;
+}
+
+#table1 table{
+    width: 100%;
 
     border-collapse: collapse;
     border-spacing: 0;
@@ -150,30 +228,31 @@ main{
 
 #table1 table caption{
     width: 100%;
-    height: 5rem;
+    height: 3rem;
 
     margin: 0;
-    padding: 1rem 0;
+    padding: 2rem 0;
 
     color: #f0f0f0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     text-align: justify;
-    line-height: 5rem;
-}
-
-#table1 table tr:nth-child(2n+1) {
-    background: #e9faf9;
+    line-height: 3rem;
 }
 
 #table1 table tr th {
-    padding: 10px;
-    background: #778ca3;
-    border-right: solid 1px #778ca3;
-    color: #ffffff;
-
     width: calc(100% / 8);
+
+    padding: 1rem;
+
+    background-color: #778ca3;
+
+    border-right: solid 1px #778ca3;
+
+    color: #f0f0f0;
+    font-size: 1.75rem;
+    font-weight: 500;
 }
 
 #table1 table tr th:last-child {
@@ -181,12 +260,175 @@ main{
 }
 
 #table1 table tr td {
-    padding: 10px;
+    padding: 1rem;
+
     border-right: solid 1px #778ca3; 
+
     color: #f0f0f0;
+    font-size: 1.75rem;
+    font-weight: 500;
 }
 
 #table1 table tr td:last-child {
+    border-right: none;
+}
+
+/*==============================*/
+
+#table2{
+    width: 90%;
+    display: none;
+
+    margin: 3rem 5%;
+
+    text-align: center;
+}
+
+#table2.view{
+    display: block;
+}
+
+#table2 form{
+    width: 60%;
+    height: auto;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 2rem;
+    margin: 2rem auto;
+
+    border-bottom: #f0f0f0 1px solid;
+}
+
+#table2 form div{
+    width: 34%;
+    height: auto;
+    display: flex;
+
+    flex-direction: row;
+    gap: 0;
+
+    margin: 1rem 0.5%;
+}
+
+#table2 form div label{
+    width: 40%;
+    height: auto;
+    display: block;
+
+    padding: 1rem 0;
+
+    color: #f0f0f0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+#table2 form div select{
+    width: 60%;
+    height: auto;
+    display: block;
+
+    padding: 1rem 0;
+
+    border: #f0f0f0 1px solid;
+    border-radius: 1rem;
+
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+#form-update{
+    width: 25%;
+    height: auto;
+    display: block;
+
+    margin: 1rem 0 1rem 5%;
+    padding: 1rem 2rem;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #0C0838;
+
+    color: #f0f0f0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+#form-update:active{
+    color: #000;
+    background-color: #f0f0f0;
+}
+
+/*==============================*/
+
+#table-compare{
+    width: 100%;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#table-compare caption{
+    width: 100%;
+    height: 3rem;
+
+    margin: 0;
+    padding: 2rem 0;
+
+    color: #f0f0f0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    line-height: 3rem;
+}
+
+#table-compare tr th {
+    width: calc(100% / 4);
+
+    padding: 1rem;
+
+    background-color: #778ca3;
+
+    border-right: solid 1px #778ca3;
+
+    color: #f0f0f0;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+#table-compare tr th:last-child {
+    border-right: none;
+}
+
+#table-compare tr td {
+    padding: 1rem;
+
+    border-right: solid 1px #778ca3; 
+
+    color: #f0f0f0;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+#table-compare tr:nth-child(2n+1) {
+    background: #778ca366;
+}
+
+#table-compare tr td:last-child {
     border-right: none;
 }
 
