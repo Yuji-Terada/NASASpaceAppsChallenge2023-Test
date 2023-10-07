@@ -7,7 +7,7 @@ html body{
 }
 html, body{
     font-family: 'Century Gothic';
-    height: 100%;
+    width: 100%;
     font-size: 10px;
 }
 header{
@@ -74,29 +74,12 @@ a .material-symbols-outlined{
     line-height: 10vh;
 }
 #back{
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 10vh;
     left: 0;
-    margin: 10% auto auto 3%;
-    width:100%;
-    background:url('../NASA_back.png');
-    object-fit: cover;
-    z-index: 999;
-    background-color: #fff;
-}
-#back:hover{
-    background:url('../NASA_back_hover.png');
-}
-.name h1{
-    position: relative;
+    width: 7.5rem;
+    height: 7.5rem;
     text-align: center;
-    margin-top: 5rem;
-    color:#ffff;
-    font-size: 12rem;
-
-    background-color: #ff0000;
-
-    display: none;
 }
 .leftside{
     position: absolute;
@@ -104,41 +87,42 @@ a .material-symbols-outlined{
     margin: -10rem auto auto 3rem;
     width: 30%;
 }
+.leftside h1{
+    position: relative;
+    text-align: center;
+    margin-top: 15rem;
+    font-size: 12rem;
+    margin-bottom: 10rem;
+}
+.leftside p{
+    font-size: 2.5rem;
+    margin: -9rem auto 10rem 11rem;
+}
 .rightside{
     position: absolute;
     text-align: right;
     margin: -10rem auto auto 65%;
     width: 30%;
 }
-h2{
-    margin-top: -3%;
-    font-size: 7rem;
-}
 .rightside h2{
-    margin-right: 0%;
+    margin-top: 35rem;
+    font-size: 3rem;
+    margin-right: 1rem;
 }
-li{
-    list-style: none;
+.rightside p{
+    text-align-last: left;
     font-size: 2rem;
-    margin-bottom: 1%;
-}
-.leftside li{
-    margin-left: 3%;
-}
-.rightside li{
-    margin-right: 3%;
-}
-#lefttop{
-    margin-top: -5rem;
-}
-#righttop{
-    margin-top: -5rem;
+    margin: auto auto auto 13rem;
 }
 
+star{
+    width: 100%;
+}
 
 canvas {
     position: absolute;
-    width: 700px;
+    width: 100%;
     height: 30%;
-    margin-top: -25rem;
+    top: 0;
+    left: 0;
 }

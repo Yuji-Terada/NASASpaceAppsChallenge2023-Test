@@ -2,38 +2,53 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="NASA_practice\reset.css">
         <link rel="stylesheet" href="./style.css">
         <title>VENUS</title>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js'></script>
-    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+        <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+        <!--GoogleFonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!--GoogleIcons読み込み-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
     </head>
     <body style="background:#000000; color:#ffff;">
-        <a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/"><img src="../icons8-back-100.png" id="back" width="70px" style="z-index: 150;"></a>
-        <div class="name">
-            <h1 style="z-index: 100;">Venus</h1>
+          <!--ヘッダー部分-->
+          <header>
+            <a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/" id="home">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <span id="header-span"></span>
+            <a href="./Spots/index.html" class="nav">Spots</a>
+            <a href="./Satellites" class="nav">Satellites</a>
+            <a href="#" class="nav">Exploration</a>
+            <a href="#" class="nav">Cost</a>
+            <a href="#" class="nav">Others</a>
+        </header>
+        <div class="back">
+            <a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/" id="back" style="z-index: 150; color:#f0f0f0;"><span class="material-symbols-outlined">chevron_left</span></a>
         </div>
         <div class="star">
             <div id="app" style="z-index:300;"></div>
             <canvas id="canvasContainer"></canvas>
             <div class="leftside">
-                <ul>
-                    <h2>Size</h2>
-                    <li>radius : 3390 km</li>
-                    <li>surface area : 144400000km²</li>
-                    <li>planet type : terrestrial</li>
-                    <li>moons : 2</li>
-                    <li>mass : 6.39 × 10^23 kg</li>
-                </ul>
+                <h1>Venus</h1>
+                <p>birth : 4.6 billion years ago</p>
+                <p>surface area : 510,100,000 km²</p>
             </div>
             <div class="rightside">
-                <ul>
-                    <h2>others</h2>
-                    <li>1 day : 24.6 hours</li>
-                    <li>1 year : 687 days</li>
-                    <li>tempereture : -80 degreesF</li>
-                    <li>CO2 : 95.32%</li>
-                    <li>nitrogen : 2.7%</li>
-                </ul>
+                <h2>A beautiful water planet</h2>
+                <p>
+                  This is the planet we live in.<br>
+                  About 3.7 billion years ago, <br>
+                  one small life was born in the earth.<br>
+                  And today, there are 8 billlon people <br>
+                  living in this their civilization.
+                </p>
             </div>
         </div>
     </body>

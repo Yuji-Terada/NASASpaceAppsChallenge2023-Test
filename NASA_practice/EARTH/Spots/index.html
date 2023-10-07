@@ -20,6 +20,18 @@
         <div class="map">
             <img src="../8081_earthmap10k.jpg" width="100%">
         </div>
+        <div class="open"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+            <div class="g-nav-list">
+                <ul>
+                    <li><a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/">Home</a></li>
+                    <li><a href="../Satellites/index.html">Satellites</a></li>
+                    <li><a href="../Exploration/index.html">Exploration</a></li>
+                    <li><a href="../Cost/index.html">Cost</a></li>
+                    <li><a href="../Others/index.html">Others</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="spots">
             <div class="japan">
                 <a href="./Japan/index.html"><img src="../../destination.png" width="7%"><p>Japan</p></a>
@@ -28,5 +40,17 @@
                 <a href="./USA/index.html"><img src="../../destination.png" width="7%"><p>The United States</p></a>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/5-1-11.js"></script>
+        <script>
+            $(".open").click(function() {
+                $(this).toggleClass('active');
+                $("#g-nav").toggleClass('panelactive');
+            });
+            $("#g-nav a").click(function(){
+                $(".open").removeClass('active');
+                $("#g-nav").removeClass('panelactive');
+            })
+        </script>
     </body>
 </html>
