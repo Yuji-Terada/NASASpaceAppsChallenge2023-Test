@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./columbiahills.css">
+        <title>Japan</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js'></script>
+        <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+        <!--GoogleFonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!--GoogleIcons読み込み-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    </head>
+    <div class="open"><span></span><span></span><span></span></div>
+    <nav id="g-nav">
+        <div class="g-nav-list">
+            <ul>
+                <li><a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/">Home</a></li>
+                <li><a href="../../SATELLITES/satellites.html">Satellites</a></li>
+                <li><a href="../../EXPLORATION/exploration.html">Exploration</a></li>
+                <li><a href="../../COST/cost.html">Cost</a></li>
+            </ul>
+        </div>
+    </nav>
+    <body style="background:#000000; color:#ffff;">
+          <!--ヘッダー部分-->
+        <a href="../spots.html"><img src="../../../NASA_back.png" id="back" width="50px" style="z-index: 150;"></a>
+        <div class="map">
+            <img src="./columbiahills.jpg" width="100%">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/5-1-11.js"></script>
+        <script>
+            $(".open").click(function() {
+                $(this).toggleClass('active');
+                $("#g-nav").toggleClass('panelactive');
+            });
+            $("#g-nav a").click(function(){
+                $(".open").removeClass('active');
+                $("#g-nav").removeClass('panelactive');
+            })
+        </script>
+    </body>
+</html>
