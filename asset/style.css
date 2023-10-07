@@ -412,7 +412,7 @@ footer p{
     }
 
     header .nav{
-        width: calc(calc(100% - 7.5rem)/5);
+        width: calc(calc(100% - 7.5rem)/4);
         line-height: 7vh;
         font-size: 1.75rem;
         color: #f0f0f0;
