@@ -89,36 +89,38 @@ a .material-symbols-outlined{
 .leftside{
     position: absolute;
     text-align: left;
-    margin: -10rem auto auto 3rem;
+    margin: 5% auto auto 0%;
     width: 30%;
 }
 .leftside h1{
     position: relative;
     text-align: center;
-    margin-top: 15rem;
-    font-size: 12rem;
-    margin-bottom: 10rem;
+    margin: 10% auto auto 0%;
+    font-size: 10rem;
 }
 .leftside p{
-    font-size: 2.5rem;
-    margin: -9rem auto 10rem 11rem;
+    text-align: cener;
+    font-size: 2rem;
+    margin: 3% auto 3% 15%;
 }
 .rightside{
     position: absolute;
     text-align: right;
-    margin: -10rem auto auto 65%;
+    margin: 10% auto auto 67%;
     width: 30%;
 }
 .rightside h2{
-    margin-top: 35rem;
+    margin-top: 0%;
     font-size: 3rem;
-    margin-right: 1rem;
+    margin-right: 1%;
 }
 .rightside p{
-    text-align-last: left;
-    font-size: 2rem;
-    margin: auto auto auto 13rem;
+    line-height: 3rem;
+    bottom: 10%;
+    font-size: 1.5rem;
+    margin: 3% auto 3% 10%;
 }
+
 
 star{
     width: 100%;
