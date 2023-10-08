@@ -1,0 +1,132 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700&display=swap");
+
+
+html body{
+    font-family: serif;
+}
+
+
+html, body{
+    font-family: 'Century Gothic';
+    width: 100%;
+    font-size: 10px;
+}
+header{
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff55;
+
+    display: flex;
+    justify-content: center;
+/*
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+*/
+    transform: translateY(0vh);
+    transition: all .8s;
+}
+
+#home{
+    width: 7.5rem;
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+    line-height: 10vh;
+    font-size: 4rem;
+    font-family: "Alatsi";
+    color: #bcbcbc;
+    text-decoration: none;
+
+    transition: all .25s;
+}
+
+#header-span{
+    width: calc(100% - 7.5rem - calc(12.5rem * 4));
+    display: block;
+}
+
+header .nav{
+    width: 12.5rem;
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+    line-height: 10vh;
+    font-size: 2.5rem;
+    font-family: "Alatsi";
+    font-weight: normal;
+    color: #bcbcbc;
+    text-decoration: none;
+
+    transition: all .25s;
+}
+
+#home:hover, header .nav:hover{
+    color: #f0f0f0;
+}
+
+a .material-symbols-outlined{
+    font-size: 5rem;
+    line-height: 10vh;
+}
+
+#back{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 7.5rem;
+    height: 7.5rem;
+    text-align: center;
+}
+.leftside{
+    position: absolute;
+    text-align: left;
+    margin: -10rem auto auto 3rem;
+    width: 30%;
+}
+.leftside h1{
+    position: relative;
+    text-align: center;
+    margin-top: 15rem;
+    font-size: 12rem;
+    margin-bottom: 10rem;
+}
+.leftside p{
+    font-size: 2.5rem;
+    margin: -9rem auto 10rem 11rem;
+}
+.rightside{
+    position: absolute;
+    text-align: right;
+    margin: -10rem auto auto 65%;
+    width: 30%;
+}
+.rightside h2{
+    margin-top: 35rem;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+.rightside p{
+    text-align-last: left;
+    font-size: 2rem;
+    margin: auto auto auto 13rem;
+}
+
+.star{
+    width: 100%;
+    height: 100%;
+}
+
+#stage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

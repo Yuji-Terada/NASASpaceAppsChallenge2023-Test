@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"><!--
+        <link rel="stylesheet" href="../../asset/reset.css">-->
+        <link rel="stylesheet" href="./saturn.css">
+        <title>SATURN</title>
+        <!--GoogleFonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!--GoogleIcons読み込み-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    </head>
+    <body style="background:#000000; color:#ffff;">
+        <!--ヘッダー部分-->
+        <header>
+            <a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/" id="home">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <span id="header-span"></span>
+            <a href="./SPOTS/spots.html" class="nav">Spots</a>
+            <a href="./SATELLITES/satellites.html" class="nav">Satellites</a>
+            <a href="./EXPLORATION/exploration.html" class="nav">Exploration</a>
+            <a href="./COST/cost.html" class="nav">Cost</a>
+        </header>
+        
+        <div class="back">
+            <a href="https://yuji-terada.github.io/NASASpaceAppsChallenge2023-Test/" id="back" style="z-index: 150; color:#f0f0f0;"><span class="material-symbols-outlined">chevron_left</span></a>
+        </div>
+        <div class="star">
+            <div id="stage"></div>
+            <div id="app" style="z-index:300;"></div>
+            <div class="leftside">
+                <h1>Saturn</h1>
+                <p>birth : 4.5 billion years ago</p>
+                <p>surface area : 4.27 × 10^10 km²</p>
+            </div>
+            <div class="rightside">
+                <h2>Planet has a good fashion sence.</h2>
+                <p>
+                    As you all know, Saturn has a big ring around it. <br>
+                    Its diameter is over 270000km. <br>
+                    However, its thickness is only about 0.5 to 1.5 meters.
+                </p>
+            </div>
+        </div>
+        
+        
+
+        <script src="https://82mou.github.io/threejs/js/three.js"></script>
+        <script src="https://82mou.github.io/threejs/js/OrbitControls.js"></script>
+        <!-- PreloadJSの読み込み -->
+        <script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+    </body>
+    <script>
+        const stageElement = document.getElementById('stage');
+        console.log(stageElement.clientWidth + ' x ' + stageElement.clientHeight)
+
+        let scene;
+        let camera;
+        let light;
+        let ambient;
+        let gridHelper;
+        let axisHelper;
+        let lightHelper;
+        let renderer;
+        let loader;
+        let width =  stageElement.clientWidth;
+        let height = stageElement.clientHeight;
+        let controls;
+
+        // テクスチャー
+        let textureSaturn;
+        let textureSaturnRing;
+        let textureUniverse;
+
+        // オブジェクト
+        let saturn;
+        let saturnRing;
+        let universe;
+
+        // ステージを作る
+        scene = new THREE.Scene();
+
+        // 読み込むテクスチャーリスト
+        let manifest = [
+        { id: 'saturn', src: 'https://raw.githubusercontent.com/82mou/sandbox/master/universe/img/saturn.jpg'}, // 土星
+        { id: 'saturn-ring', src: 'https://raw.githubusercontent.com/82mou/sandbox/master/universe/img/saturn-ring.jpg'}, // 土星の輪
+        { id: 'universe', src: './blackbgi.jpg'} // 宇宙空間
+        ];
+        
+        // ロードキューを作成
+        let loadQueue = new createjs.LoadQueue();
+
+        // ロード完了を監視
+        loadQueue.on('complete', function() {
+        // loadQueueからロードした画像データを取得
+        let saturnImg = loadQueue.getResult('saturn');
+        let saturnRingImg = loadQueue.getResult('saturn-ring');
+        let universeImg = loadQueue.getResult('universe');
+
+        // three.jsで使えるテクスチャーに変換
+        textureSaturn = new THREE.Texture(saturnImg);
+        textureSaturnRing = new THREE.Texture(saturnRingImg);
+        textureUniverse = new THREE.Texture(universeImg);
+
+        // 【重要】更新を許可
+        textureSaturn.needsUpdate = true;
+        textureSaturnRing.needsUpdate = true;
+        textureUniverse.needsUpdate = true;
+
+        saturn = planetFactory(textureSaturn, 18, 20, 20, '', 0, 0, 0);
+        universe = planetFactory(textureUniverse, 10000, 20, 20, 'isUniverse', 0, 0, 0);
+        saturnRing = ringFactory(textureSaturnRing, 30, 5, 2, 1000, 0, 0, 0);
+        render();
+        });
+
+        // テクスチャーのロードを開始
+        loadQueue.loadManifest(manifest);
+
+        // 環境光を作る
+        ambient = new THREE.AmbientLight(0xffffff, 0.85);
+        ambient.position.set(0, 500, 0);
+        scene.add(ambient);
+
+        // カメラを作る
+        camera = new THREE.PerspectiveCamera(15, width / height, 1, 1000000);
+        camera.position.set(200, 0, 0);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+        // controls
+        controls = new THREE.OrbitControls(camera);
+
+        // renderer
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(width, height);
+        renderer.setClearColor(0xefefef);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        document.getElementById('stage').appendChild(renderer.domElement);
+
+        function planetFactory (texture, radius, widthSegments, heightSegments, planetName, x, y, z) {
+        let sphere,
+            sphereEarth;
+        
+        if(planetName === 'isUniverse') {
+            sphere = new THREE.Mesh(
+            new THREE.SphereGeometry(radius, widthSegments, heightSegments), // 形状     
+            new THREE.MeshLambertMaterial({ // 材質     
+                map: texture,
+                side: THREE.DoubleSide // 裏からも見えるようにする
+            })
+            );
+            sphere.position.set(x, y, z);
+        } else {
+            sphere = new THREE.Mesh(
+            new THREE.SphereGeometry(radius, widthSegments, heightSegments), // 形状
+            new THREE.MeshLambertMaterial({ // 材質     
+                map: texture                           
+            })
+            );
+            sphere.position.set(x, y, z);
+        }
+        scene.add(sphere);
+        return sphere;
+        }
+
+        function ringFactory (texture, radius, tube, radialSegments, tubularSegments, x, y, z) {
+        let ring;
+        
+        // 輪を作る
+        ring = new THREE.Mesh(
+            new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments), // 芯円半径、断面円半径、断面円分割、芯円分割
+            new THREE.MeshPhongMaterial({ // 材質
+            map: texture,
+            opacity:0.7,
+            transparent: true
+            })
+        );
+        ring.position.set(x, y, z);
+        ring.rotation.x = 1.9
+        ring.rotation.y = -0.3
+        
+        scene.add(ring);
+        return ring;
+        }
+
+        function render() {
+        requestAnimationFrame(render);
+
+        controls.update();
+        renderer.render(scene, camera);
+        }
+    </script>
+</html>
