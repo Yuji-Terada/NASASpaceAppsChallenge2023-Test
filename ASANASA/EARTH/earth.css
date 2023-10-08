@@ -84,7 +84,7 @@ a .material-symbols-outlined{
 .leftside{
     position: absolute;
     text-align: left;
-    margin: 30% auto auto 0%;
+    margin: 5% auto auto 0%;
     width: 30%;
 }
 .leftside h1{
@@ -101,9 +101,8 @@ a .material-symbols-outlined{
 .rightside{
     position: absolute;
     text-align: right;
-    margin: 33% auto auto 70%;
+    margin: 10% auto auto 67%;
     width: 30%;
-    display: none;
 }
 .rightside h2{
     margin-top: 0%;
@@ -126,9 +125,4 @@ canvas {
     height: 30%;
     top: 0;
     left: 0;
-}
-@media screen and (min-width: 960px) {
-    .rightside{
-        display: block;
-    }
 }
